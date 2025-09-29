@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título de la página -->
+  <title>Juan Pérez | Arquitecto</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/my-avatar.png" type="image/x-icon">
+
+  <!-- Fuente de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta descripción para SEO -->
+  <meta name="description" content="Portafolio de Juan Pérez, arquitecto especializado en diseño residencial y proyectos innovadores.">
+  <meta name="author" content="Juan Pérez">
+
+</head>
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!-- ************************** -->
+    <!-- ******* SIDEBAR ******** -->
+    <!-- ************************** -->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+        <a href="images/aakash_bnw.png" target="_blank" rel="noopener noreferrer" title="Click me!">
+          <figure class="avatar-box">
+            <img src="images/juan.png" alt="Juan Pérez" width="80">
+            <span class="active-status" title="Disponible para proyectos!"></span>
+          </figure>
+        </a>
+
+        <div class="info-content">
+          <h1 class="name" title="Juan Pérez">Juan Pérez</h1>
+          <p class="title">Arquitecto</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contactos</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:juanperez.arq@example.com" class="contact-link">juanperez.arq@example.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="https://www.whatsapp.com/" target="_blank" class="contact-link">+1 809 555 1234</a>
+            </div>
+
+          </li>
+          
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <a href="https://www.google.com/maps/place/Santo+Domingo,+Rep%C3%BAblica+Dominicana" target="_blank" class="contact-link">Santo Domingo, RD</a>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://facebook.com/" target="_blank"class="social-link">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.tweeter.net/" target="_blank"class="social-link">
+            <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/" target="_blank"class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+    <!-- ************************** -->
+    <!-- **** FIN DE SIDEBAR **** -->
+    <!-- ************************** -->
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!-- ************************** -->
+      <!-- ******** NAVBAR ******** -->
+      <!-- ************************** -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#" class="navbar-link active" data-nav-link data-page="about">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link data-page="resume">CV</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link data-page="portfolio">Portfolio</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link data-page="services">Servicios</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link data-page="contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- ************************** -->
+      <!-- **** FIN DE NAVBAR ***** -->
+      <!-- ************************** -->
+
+
+      <!-- ********* HOME ********* -->
+<!-- ************************** -->
+<article class="about active" data-page="about">
+
+  <header>
+    <h2 class="h2 article-title">Home</h2>
+  </header>
+
+  <section class="about-text">
+    <p>
+      <strong>¿Todavía no tienes un sitio web?</strong>
+    </p>
+
+    <p>
+      Puede que nunca lo hayas considerado, pero tener una página web es probablemente la mejor decisión para tu futuro: ya sea como trabajador independiente, dueño de negocio o joven en busca de empleo.
+    </p>
+
+    <p>
+      La ventaja principal es simple: un sitio web te permite mostrar tu trabajo y servicios a cientos o miles de personas al mismo tiempo, de forma profesional y confiable. Sin web, dependes del boca a boca, de contactos aislados o de esperar que alguien se interese por casualidad. Con una web, tú controlas quién te descubre y cómo te perciben.
+    </p>
+
+    <p>
+      Más que vender directamente, tu web presenta tu oferta, genera confianza y filtra automáticamente a los clientes que realmente están interesados. Esto hace que cada folleto, tarjeta o publicación en redes sociales valga mucho más.
+    </p>
+
+    <p>
+      Déjanos mostrarte ejemplos concretos de cómo una web puede transformar tu manera de atraer clientes:
+    </p>
+  </section>
+
+  <!-- NUEVA SECCIÓN DE EJEMPLOS CONCEPTUALES MEJORADA -->
+  <section class="service">
+    <h3 class="h3 service-title">Ejemplos</h3>
+
+    <ul class="service-list">
+      <!-- Ejemplo 1: Visión con web vs sin web -->
+      <li class="service-item text-example">
+        <div class="service-icon-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffdb70'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z'/%3E%3C/svg%3E" alt="icono visión" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">🌍 Visión: con web vs sin web</h4>
+          <div class="text-example-content">
+            <p>Sin una web, acercarse a muchos clientes potenciales casi siempre se siente fuera de lugar. Un restaurante puede repartir 250 folletos en un día y nadie lo ve raro, porque existe una estructura que avala ese acto.</p>
+            <p>Pero si un profesional independiente hace lo mismo —repartir folletos o escribir a desconocidos en redes—, la percepción cambia: parece poco natural, incluso poco confiable.</p>
+            <p>En cambio, un sitio web te da esa estructura invisible que te hace ver tan legítimo como una empresa o un negocio físico. La web transmite seriedad y profesionalismo. No eres tú forzando a la gente a escucharte: es tu web la que se presenta y vende por ti.</p>
+            <p class="highlight-point">No es lo mismo decir "vendo pasteles" que tener un negocio que los presenta por ti. Con una web no pareces alguien intentando vender, sino una marca confiable que muestra lo que ofrece de manera clara y profesional.</p>
+          </div>
+        </div>
+      </li>
+
+      <!-- Ejemplo 2: El poder de una publicación -->
+      <li class="service-item text-example">
+        <div class="service-icon-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffdb70'%3E%3Cpath d='M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z'/%3E%3C/svg%3E" alt="icono publicación" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">🔹 El poder de una publicación</h4>
+          <div class="text-example-content">
+            <p>Compartir tu página en un grupo de WhatsApp o Facebook con 5,000 usuarios y 1,000 miembros activos es muy fácil y común. En segundos puedes estar frente a cientos de personas.</p>
+            <p>Sin una web, el proceso es pesado: debes escribir, esperar respuesta, intentar convencer, gastar 5–20 minutos en una conversación que probablemente no termine en nada. Con una web, en cambio, basta con un saludo breve y un enlace: tu sitio hace el resto.</p>
+            <p>La diferencia está en la forma en que te presentas y al numero de personas a la que le puedes llegar sin perder detalles esenciales:</p>
+            <ul class="comparison-list">
+              <li><strong>Sin web:</strong> Te desgastas y dependes de tu capacidad de convencer en cada chat de forma individual. Estás muy limitado en el número de personas que puedes abordar al día.</li>
+              <li><strong>Con web:</strong> Tu argumento de venta está siempre listo, es más sólido de lo que podrías escribir en minutos, y solo hablas largo con quienes ya tienen interés real.</li>
+            </ul>
+            <p class="highlight-point">👉 En lugar de perder tiempo con 100 personas que no necesitan lo que ofreces, tu web filtra y atrae a los pocos que sí. Ese pequeño porcentaje es mas que un cliente potencial aleatorio.</p>
+            <p>Con una web puedes llegarle a 20, 50, 100 o 1,000 personas en muy poco tiempo, y siempre habrá un pequeño % que estén interesados. No dependes de la suerte ni de ser un gran vendedor: dependes de tener una web limpia, profesional y visible.</p>
+          </div>
+        </div>
+      </li>
+
+      <!-- Ejemplo 3: La clave está en la percepción -->
+      <li class="service-item text-example">
+        <div class="service-icon-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffdb70'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z'/%3E%3C/svg%3E" alt="icono confianza" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">✅ La clave está en la percepción</h4>
+          <div class="text-example-content">
+            <p>Ya no pareces una persona aislada vendiendo algo. Te perciben como una empresa seria, confiable y legítima.</p>
+            <p>Es lo mismo que pasa con las grandes marcas: cuando recibes un correo de TEMU o Uber Eats, no te preguntas "¿por qué me escriben?". Pero si un desconocido te manda un mensaje vendiendo ropa, sí lo haces.</p>
+            <p>La diferencia está en la estructura que hay detrás, sea grande o pequeña. Una estructura detrás es esencial.</p>
+            <p>Una web profesional respalda tu presencia y te permite llegar a miles de personas al mismo tiempo, sin perder seriedad ni desgastarte. Es, literalmente, el mejor vendedor que puedes tener: trabaja 24/7, nunca se cansa, nunca comete errores y siempre transmite confianza.</p>
+            <p class="highlight">Tu trabajo ya no es convencer a nadie: tu trabajo es hacer visible tu web. Ella vende por ti.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="separator"></div>
+
+  <!-- SECCIÓN DE EJEMPLOS PRÁCTICOS (SE MANTIENE) -->
+  <section class="practical-examples">
+    <h3 class="h3 clients-title">Ejemplos prácticos en la vida real</h3>
+
+    <ul class="practical-examples-list">
+      <li class="practical-examples-item">
+        <div class="example-content">
+          <h4 class="example-title">Chofer personal para niños</h4>
+          <p class="example-text">Puede presentarse como "colaborador oficial de ciertas escuelas". En su web muestra su experiencia, reseñas de padres satisfechos y la cercanía de su servicio con la escuela. Eso genera confianza inmediata y atrae más clientes.</p>
+        </div>
+      </li>
+
+      <li class="practical-examples-item">
+        <div class="example-content">
+          <h4 class="example-title">Profesor particular</h4>
+          <p class="example-text">Puede repartir tarjetas en las afueras de colegios y compartir su web en grupos de padres. Si reparte su tarjeta a 100 padres y apenas un 10% lo contrata, ya logró generar la demanda sin necesidad de ser un vendedor: su web vendió sus servicios por él. Además, quienes recibieron su tarjeta pueden no necesitarlo hoy, pero recordarán su página en el futuro.</p>
+        </div>
+      </li>
+
+      <li class="practical-examples-item">
+        <div class="example-content">
+          <h4 class="example-title">Barbería o puesto de comida</h4>
+          <p class="example-text">Puede pegar folletos con su web en lugares estratégicos. En la página, el cliente descubre que el local está cerca de su casa, trabajo o escuela. Además, se pueden ofrecer descuentos como: "Muestra que nos encontraste en nuestra página y recibe 15% de rebaja". También es posible crear suscripciones para enviar correos o mensajes semanales, igual que hacen grandes empresas como Uber Eats, motivando a los clientes a volver.</p>
+        </div>
+      </li>
+
+      <li class="practical-examples-item">
+        <div class="example-content">
+          <h4 class="example-title">Tienda de ropa</h4>
+          <p class="example-text">Puede mostrar sus productos en la web y permitir pedidos por WhatsApp. Así no solo vende en su local, también a domicilio.</p>
+        </div>
+      </li>
+
+      <li class="practical-examples-item">
+        <div class="example-content">
+          <h4 class="example-title">Clínica de oftalmología</h4>
+          <p class="example-text">Puede ofrecer desde su web descuentos en gafas para quienes reserven su cita en línea y sean puntuales. Esto no solo aumenta las ventas, sino también la organización y la confianza de los pacientes.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="separator"></div>
+
+  <!-- VENTAJAS (se mantiene igual) -->
+  <section class="service">
+    <h3 class="h3 service-title">Ventajas claras de una web sobre depender solo de redes sociales</h3>
+
+    <ul class="service-list">
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffdb70'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E" alt="icono control" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Control total</h4>
+          <p class="service-item-text">
+            Tú decides qué mostrar, cómo mostrarlo y a cuántas personas llegar. Si quieres, puedes invertir en SEO para aparecer en Google o contratar a alguien para repartir tus enlaces y folletos.
+          </p>
+        </div>
+      </li>
+
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffdb70'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E" alt="icono alcance" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Mayor alcance</h4>
+          <p class="service-item-text">
+            Tu web se comparte en cualquier lugar: WhatsApp, Facebook, Instagram, correos, tarjetas, carteles.
+          </p>
+        </div>
+      </li>
+
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffdb70'%3E%3Cpath d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E" alt="icono confianza" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Confianza y seriedad</h4>
+          <p class="service-item-text">
+            Una web propia transmite más profesionalismo que un simple perfil en redes.
+          </p>
+        </div>
+      </li>
+
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffdb70'%3E%3Cpath d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z'/%3E%3C/svg%3E" alt="icono 24 horas" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Más clientes potenciales = más clientes reales</h4>
+          <p class="service-item-text">
+            Tu web trabaja por ti las 24 horas, incluso mientras duermes.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- RESUMEN FINAL (se mantiene igual) -->
+  <section class="about-text cta-section">
+    <h3 class="h3 service-title">En resumen</h3>
+    <p>
+      Con una página web dejas de esperar a que te encuentren por casualidad. Ahora tú decides cuántos clientes potenciales te descubren, y ellos deciden si lo que ofreces les conviene.
+    </p>
+    
+    <p>
+      Y recuerda: no basta con tener un buen producto o servicio, necesitas ser visible y generar demanda.<br>
+      Tu web es la herramienta que convierte tu talento en un negocio con estrategias claras.
+    </p>
+
+    <p class="highlight">
+      Antes, no eras una opción visible. Con una web, te conviertes en una opción real y seria.
+    </p>
+  </section>
+
+</article>
+<!-- ************************** -->
+<!-- ***** FIN DE ABOUT ***** -->
+<!-- ************************** -->
+
+
+      <!-- ************************** -->
+      <!-- ******** RESUME ********* -->
+      <!-- ************************** -->
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Currículum</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Educación</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Universidad Autónoma de Santo Domingo</h4>
+              <p class="timeline-text">Licenciatura en Arquitectura</p>
+              <span>2010 — 2015</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Escuela Nacional de Artes Visuales</h4>
+              <p class="timeline-text">Diplomado en Diseño de Interiores</p>
+              <span>2008 — 2010</span>
+            </li>
+
+          </ol>
+
+        </section>
+
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experiencia</h3>
+          </div>
+        
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Arquitecto Senior</h4>
+              <p class="timeline-text">Estudio Pérez & Asociados</p>
+              <span data-start-date="2021-01-01" data-end-date="2025-01-01">Ene, 2021 — Presente &nbsp; &#8226; <span class="duration"></span>
+              <p class="timeline-text"><i>Santo Domingo, RD</i></p>
+              <ul class="timeline-text">
+                <li>Diseño de complejos residenciales y proyectos de uso mixto.</li>
+                <li>Supervisión técnica y coordinación con contratistas.</li>
+                <li>Aplicación de criterios de sostenibilidad y eficiencia energética.</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Arquitecto Junior</h4>
+              <p class="timeline-text">Constructora Dominicana</p>
+              <span data-start-date="2016-06-01" data-end-date="2020-12-01">Jun, 2016 — Dic, 2020 &nbsp; &#8226; <span class="duration"></span></span>
+              <p class="timeline-text"><i>Santo Domingo, RD</i></p>
+              <ul class="timeline-text">
+                <li>Elaboración de planos y detalles constructivos para proyectos residenciales.</li>
+                <li>Colaboración en proyectos comerciales y remodelaciones.</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Practicante</h4>
+              <p class="timeline-text">Estudio de Arquitectura Local</p>
+              <span data-start-date="2015-01-01" data-end-date="2016-05-01">Ene, 2015 — May, 2016 &nbsp; &#8226; <span class="duration"></span></span>
+              <p class="timeline-text"><i>Santo Domingo, RD</i></p>
+              <ul class="timeline-text">
+                <li>Soporte en modelado 3D y preparación de presentaciones para clientes.</li>
+                <li>Participación en mediciones de obra y control documental.</li>
+              </ul>
+            </li>
+
+          </ol>
+        </section>
+        
+        <button class="form-btn" type="button" data-form-btn onclick="window.open('assets/cv/flutter_aakash.pdf')">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <span>Download CV</span>
+        </button>
+
+      </article>
+      <!-- ************************** -->
+      <!-- **** FIN DE RESUME ***** -->
+      <!-- ************************** -->
+
+
+      <!-- ************************** -->
+      <!-- ******* PORTFOLIO ******* -->
+      <!-- ************************** -->
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portafolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Residencial</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Comercial</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Institucional</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Seleccionar categoría</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Residenciales</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Escuelas</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Hoteles</button>
+              </li>
+
+
+            </ul>
+
+          </div>
+
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="residencial">
+              <a href="#" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="projects/bella-casa.jpg" alt="Hermosa Casa con Piscina" loading="lazy">
+                </figure>
+                <h3 class="project-title">Casa Tropical Moderna</h3>
+                <p class="project-category">Residencial</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="educacional">
+              <a href="#" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="projects/escuela.jpg" alt="Escuela Moderna" loading="lazy">
+                </figure>
+                <h3 class="project-title">Escuela Moderna</h3>
+                <p class="project-category">Educacional</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="hospitality">
+              <a href="#" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="projects/hotel.jpg" alt="Hotel Hermoso" loading="lazy">
+                </figure>
+                <h3 class="project-title">Hotel Boutique</h3>
+                <p class="project-category">Hospitality</p>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+      <!-- ************************** -->
+      <!-- *** FIN DE PORTFOLIO **** -->
+      <!-- ************************** -->
+
+
+      <!-- ************************** -->
+      <!-- ******* SERVICES ******** -->
+      <!-- ************************** -->
+      <article class="services" data-page="services">
+
+        <header class="services-header">
+            <h2 class="services-title">Servicios</h2>
+            <p class="services-intro">
+                Ofrezco soluciones arquitectónicas creativas y funcionales, con atención personalizada desde el concepto hasta la entrega final.
+            </p>
+        </header>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176363.png" alt="Diseño Residencial" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Diseño Residencial</h4>
+                    <p class="service-description">
+                        Creación de viviendas únicas que reflejan la personalidad y necesidades de cada cliente. 
+                        Desde apartamentos modernos hasta villas de lujo, diseño espacios habitables que equilibran 
+                        estética, funcionalidad y confort.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176412.png" alt="Diseño Comercial" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Diseño Comercial</h4>
+                    <p class="service-description">
+                        Desarrollo de espacios comerciales optimizados para la experiencia del cliente y la eficiencia operativa. 
+                        Diseño de oficinas, tiendas, restaurantes y edificios corporativos que refuerzan la identidad de marca 
+                        y mejoran la productividad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176411.png" alt="Diseño Institucional" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Diseño Institucional</h4>
+                    <p class="service-description">
+                        Proyectos para instituciones educativas, sanitarias y culturales centrados en el bienestar de sus usuarios. 
+                        Espacios que fomentan el aprendizaje, la curación y la inspiración, cumpliendo con normativas específicas 
+                        y estándares de accesibilidad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176380.png" alt="Diseño de Interiores" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Diseño de Interiores</h4>
+                    <p class="service-description">
+                        Transformación de espacios interiores mediante soluciones creativas de distribución, selección de materiales, 
+                        iluminación y mobiliario. Creo ambientes armónicos que mejoran la calidad de vida y reflejan la esencia de quienes los habitan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176434.png" alt="Modelado 3D" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Modelado 3D y Visualización</h4>
+                    <p class="service-description">
+                        Representaciones fotorrealistas que permiten visualizar proyectos antes de su construcción. 
+                        Utilizo las últimas tecnologías en renderizado para crear imágenes y recorridos virtuales 
+                        que facilitan la toma de decisiones y la aprobación de diseños.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176395.png" alt="Gestión de Proyectos" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Gestión de Proyectos</h4>
+                    <p class="service-description">
+                        Supervisión integral de obras con coordinación de equipos, control de presupuestos y plazos de ejecución. 
+                        Garantizo que cada proyecto se materialice según lo planeado, manteniendo los más altos estándares de calidad 
+                        y cumpliendo con las expectativas del cliente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176424.png" alt="Diseño Sostenible" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Diseño Sostenible</h4>
+                    <p class="service-description">
+                        Arquitectura consciente con el medio ambiente que incorpora principios bioclimáticos, eficiencia energética 
+                        y materiales ecológicos. Diseño espacios que reducen el impacto ambiental y promueven un estilo de vida 
+                        más saludable y responsable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-wrapper">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176408.png" alt="Planificación Urbana" class="service-icon">
+                </div>
+                <div class="service-content">
+                    <h4 class="service-name">Planificación Urbana</h4>
+                    <p class="service-description">
+                        Desarrollo de propuestas urbanísticas que integran espacios verdes, movilidad sostenible y comunidad. 
+                        Diseño masterplans y proyectos de paisajismo que mejoran la calidad de vida en entornos urbanos, 
+                        creando ciudades más habitables y resilientes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <h3 class="cta-title">¿Tienes un proyecto en mente?</h3>
+            <p class="cta-text">
+                Estoy disponible para discutir tus ideas y ayudarte a materializar tu visión. 
+                Juntos podemos crear espacios excepcionales que perduren en el tiempo.
+            </p>
+            <a href="#contact" class="cta-btn">Contactar ahora</a>
+        </section>
+      </article>
+      <!-- ************************** -->
+      <!-- **** FIN DE SERVICES **** -->
+      <!-- ************************** -->
+
+
+      <!-- ************************** -->
+      <!-- ******** CONTACT ******** -->
+      <!-- ************************** -->
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contacto</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Santo%20Domingo%20(Estudio%20de%20Arquitectura)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Formulario de Contacto</h3>
+        
+          <form action="https://api.web3forms.com/submit" method="POST" class="form" data-form>
+            <input type="hidden" name="access_key" value="3bfdc8c6-a387-429f-a1a4-3c397d132d11">
+            <input type="hidden" name="from_name" value="Portafolio">
+        
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Nombre completo" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required data-form-input>
+            </div>
+        
+            <input type="text" name="subject" class="form-input" placeholder="Asunto" required data-form-input>
+        
+            <textarea name="message" class="form-input" placeholder="Tu Mensaje" required data-form-input></textarea>
+        
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Enviar Mensaje</span>
+            </button>
+          </form>
+        </section>
+        
+        <div id="toast" class="toast"></div>
+
+        <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.js"></script>
+      </article>
+      <!-- ************************** -->
+      <!-- **** FIN DE CONTACT ***** -->
+      <!-- ************************** -->
+
+    </div>
+
+  </main>
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+
+  <!--
+    - experience calculator
+  -->
+  <script src="assets/js/experience-calculator.html"></script>
+
+<!-- 
+- chatbot 
+-->
+
+
+                   
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

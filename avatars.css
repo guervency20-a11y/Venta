@@ -1,0 +1,116 @@
+/*-----------------------------------*\
+      #VARIABLES DE HOME (PARA INTEGRACIÓN)
+\*-----------------------------------*/
+:root {
+    --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+    --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+    --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
+    --bg-gradient-yellow-2: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+    --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
+    --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
+    --jet: hsl(0, 0%, 22%); --onyx: hsl(240, 1%, 17%); --eerie-black-1: hsl(240, 2%, 13%);
+    --eerie-black-2: hsl(240, 2%, 12%); --smoky-black: hsl(0, 0%, 7%); --white-1: hsl(0, 0%, 100%);
+    --white-2: hsl(0, 0%, 98%); --orange-yellow-crayola: hsl(45, 100%, 72%); --vegas-gold: hsl(45, 100%, 72%);
+    --light-gray: hsl(0, 0%, 84%); --light-gray-70: hsla(0, 0%, 84%, 0.7); --bittersweet-shimmer: hsl(0, 43%, 51%);
+    --ff-poppins: 'Poppins', sans-serif; --fs-1: 24px; --fs-2: 18px; --fs-3: 17px; --fs-4: 16px;
+    --fs-5: 15px; --fs-6: 14px; --fs-7: 13px; --fs-8: 11px; --fw-300: 300; --fw-400: 400;
+    --fw-500: 500; --fw-600: 600; --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25); --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+    --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15); --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+    --transition-1: 0.25s ease; --transition-2: 0.5s ease-in-out;
+}
+
+/*-----------------------------------*\
+      #SISTEMA DE AVATAR COMPACTADO (CORREGIDO)
+\*-----------------------------------*/
+
+/* Contenedor Principal */
+.audio-player { position: fixed; top: 20px; left: 20px; right: auto; z-index: 1000; display: flex; align-items: center; user-select: none; -webkit-user-select: none; }
+.audio-player.dragging { transition: none !important; animation: none !important; cursor: grabbing !important; }
+
+/* Contenedor Circular del Avatar */
+.player-closed { width: 80px; height: 80px; position: relative; cursor: pointer; transition: all 0.4s var(--transition-1); background: transparent; border: none; box-shadow: none; }
+.player-closed:hover { transform: scale(1.08); }
+.avatar-image { position: absolute; top: 50%; left: 50%; width: 65px; height: 65px; border-radius: 50%; object-fit: cover; opacity: 0; transform: translate(-50%, -50%); transition: all 0.3s ease; }
+.avatar-image.active { opacity: 1; }
+
+/* Botón de Expansión (Flecha) */
+.expand-button { width: 22px; height: 50px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.4s var(--transition-1); z-index: 1001; position: absolute; left: 60px; top: 50%; transform: translateY(-50%); }
+.expand-button::before { content: '›'; color: var(--light-gray); font-size: 24px; transition: all 0.3s ease; }
+.expand-button:hover::before { color: var(--orange-yellow-crayola); }
+
+/* Panel de Audio Expandido */
+.player-extended { width: 0; height: 70px; border-radius: 35px; background: var(--bg-gradient-jet); border: 1px solid var(--jet); box-shadow: var(--shadow-3); display: flex; align-items: center; gap: 10px; padding: 0 15px; opacity: 0; transition: all 0.3s ease; overflow: visible; margin-left: 85px; }
+.expanded .player-extended { width: 480px; opacity: 1; }
+
+/* Controles de Reproducción y Botones */
+.play-button-main { width: 48px; height: 48px; border-radius: 50%; background: var(--text-gradient-yellow); box-shadow: var(--shadow-2); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; flex-shrink: 0; }
+.play-button-main:hover { transform: scale(1.1); box-shadow: var(--shadow-3); }
+.play-icon { width: 0; height: 0; border-left: 14px solid var(--eerie-black-2); border-top: 8px solid transparent; border-bottom: 8px solid transparent; margin-left: 3px; }
+.play-button-main.playing .play-icon { width: 16px; height: 16px; border: none; background: linear-gradient(90deg, var(--eerie-black-2) 35%, transparent 35%, transparent 65%, var(--eerie-black-2) 65%); margin-left: 0; }
+
+.nav-button, .narrators-button, .music-button, .info-button { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; flex-shrink: 0; color: var(--light-gray); background: var(--border-gradient-onyx); box-shadow: var(--shadow-1); }
+.narrators-button { background: var(--text-gradient-yellow); box-shadow: 0 4px 15px hsla(45, 100%, 72%, 0.2); }
+.nav-button:hover, .narrators-button:hover, .music-button:hover, .info-button:hover { transform: scale(1.1); box-shadow: var(--shadow-2); color: var(--white-2); }
+.nav-button:active, .narrators-button:active, .music-button:active, .play-button-main:active, .info-button:active { transform: scale(0.95); box-shadow: inset 0 3px 6px hsla(0, 0%, 0%, 0.35); filter: brightness(0.9); }
+.narrators-button::before { content: '👥'; font-size: 20px; color: var(--eerie-black-2); }
+.music-button::before { content: '🎵'; font-size: 20px; }
+.music-button.muted::after { content: ''; position: absolute; top: 50%; left: 50%; width: 28px; height: 2px; background: var(--bittersweet-shimmer); transform: translate(-50%, -50%) rotate(-45deg); border-radius: 1px; }
+
+/* Panel de Información */
+.info-button { font-size: 16px; font-weight: bold; color: var(--light-gray-70); }
+.info-panel { display: none; position: absolute; top: calc(100% + 15px); right: 20px; background: var(--eerie-black-2); color: var(--light-gray); padding: 15px; border-radius: 10px; width: 300px; z-index: 10000; box-shadow: var(--shadow-3); border: 1px solid var(--jet); }
+.info-panel.show { display: block; }
+.info-panel h4 { margin: 0 0 10px 0; color: var(--orange-yellow-crayola); }
+.info-panel p, .info-panel li { font-size: var(--fs-7); line-height: 1.6; }
+.info-panel ul { padding-left: 20px; }
+
+/* Selector de Narradores (CORREGIDO) */
+.narrator-control { position: relative; }
+.narrators-selector { position: absolute; top: calc(100% + 15px); /* <-- Comportamiento por defecto: abrir hacia abajo */ left: 50%; transform: translateX(-50%) translateY(10px) scale(0.9); width: max-content; background: var(--eerie-black-2); border: 1px solid var(--jet); border-radius: 20px; padding: 12px; box-shadow: var(--shadow-3); display: flex; gap: 12px; opacity: 0; transition: all 0.3s var(--transition-1); pointer-events: none; z-index: 1001; }
+.narrator-control.open-upward .narrators-selector { top: auto; bottom: calc(100% + 15px); /* <-- Excepción: abrir hacia arriba */ }
+.narrator-control.is-open .narrators-selector { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); pointer-events: all; }
+.narrator-option { width: 60px; height: 60px; border-radius: 50%; background: var(--border-gradient-onyx); box-shadow: var(--shadow-1); cursor: pointer; transition: all 0.25s ease; position: relative; overflow: hidden; }
+.narrator-option .preview-image { width: 100%; height: 100%; object-fit: cover; }
+.narrator-option:hover { transform: scale(1.1) translateY(-4px); box-shadow: var(--shadow-2); }
+.narrator-option.active { box-shadow: 0 0 0 3px var(--white-1), 0 0 0 6px var(--orange-yellow-crayola); transform: scale(1.05); }
+.narrator-option::after { content: attr(data-name); position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%); font-size: var(--fs-8); color: var(--light-gray); font-weight: var(--fw-500); }
+
+/* Barra de Progreso y Tiempo */
+.progress-container { flex-grow: 1; display: flex; align-items: center; gap: 12px; min-width: 0; }
+.progress-bar { height: 6px; flex-grow: 1; background: var(--onyx); border-radius: 3px; cursor: pointer; transition: height 0.2s ease; }
+.progress-bar:hover { height: 8px; }
+.progress-fill { height: 100%; width: 0%; background: var(--text-gradient-yellow); border-radius: 3px; position: relative; transition: width 0.2s ease; }
+.progress-fill::after { content: ''; position: absolute; top: 50%; right: -6px; width: 14px; height: 14px; background: var(--white-1); border: 3px solid var(--orange-yellow-crayola); border-radius: 50%; transform: translateY(-50%); opacity: 0; transition: opacity 0.3s ease; }
+.progress-bar:hover .progress-fill::after { opacity: 1; }
+.time-display { font-size: var(--fs-7); color: var(--light-gray); min-width: 45px; text-align: center; font-weight: var(--fw-500); }
+
+/* Ecualizador */
+.equalizer { display: flex; gap: 3px; align-items: flex-end; height: 24px; }
+.eq-bar { width: 4px; background: var(--text-gradient-yellow); border-radius: 2px; height: 5px; animation: equalizerDance 1.2s infinite ease-in-out; }
+.eq-bar:nth-child(2) { animation-delay: 0.3s; } .eq-bar:nth-child(3) { animation-delay: 0.6s; } .eq-bar:nth-child(4) { animation-delay: 0.9s; }
+@keyframes equalizerDance { 0%, 100% { height: 5px; } 50% { height: 20px; } }
+
+/* Alertas y Elementos Ocultos */
+.micro-alert { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--bg-gradient-jet); padding: 10px 20px; border-radius: 8px; box-shadow: var(--shadow-2); color: var(--white-1); font-size: var(--fs-6); z-index: 2000; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; border: 1px solid var(--jet); }
+.micro-alert.show { opacity: 1; }
+.audio-player.hidden, .show-avatar-area { display: none; }
+.show-avatar-area.visible { display: flex; position: fixed; top: 20px; right: 20px; width: 60px; height: 60px; background: rgba(0,0,0,0.3); border-radius: 50%; cursor: pointer; z-index: 9998; justify-content: center; align-items: center; color: white; font-size: 24px; }
+
+/* Diseño Adaptable (Responsive) */
+@media (max-width: 768px) {
+    .expanded .player-extended { width: calc(100vw - 120px); max-width: 400px; gap: 8px; }
+    .equalizer, .time-display { display: none; }
+    .progress-container { max-width: none; }
+}
+@media (max-width: 480px) {
+    .audio-player { top: 10px; left: 10px; }
+    .player-closed { width: 70px; height: 70px; }
+    .avatar-image { width: 55px; height: 55px; }
+    .expand-button { left: 55px; }
+    .expanded .player-extended { width: calc(100vw - 90px); height: 60px; margin-left: 75px; }
+    .nav-button, .narrators-button, .music-button, .info-button { width: 35px; height: 35px; }
+    .play-button-main { width: 40px; height: 40px; }
+    .narrator-option { width: 48px; height: 48px; }
+}
+

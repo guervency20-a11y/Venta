@@ -34,65 +34,6 @@
 </head>
 <body>
 <main>
-    <!-- Sistema de Audio Premium Integrado -->
-    <div class="audio-player">
-        <div class="expand-button" aria-label="Expandir reproductor"></div>
-        <div class="player-extended">
-            <div class="nav-button prev" role="button">‹</div>
-            <div class="play-button-main" role="button" aria-label="Play/Pausa">
-                <div class="play-icon"></div>
-            </div>
-            <div class="nav-button next" role="button">›</div>
-            <div class="narrator-control">
-                <div class="narrators-button" role="button" aria-label="Seleccionar narrador"></div>
-                <div class="narrators-selector">
-                    <div class="narrator-option active" data-narrator="1" data-name="Nara">
-                        <img class="preview-image" src="webp/nara-espera.webp" alt="Nara">
-                    </div>
-                    <div class="narrator-option" data-narrator="2" data-name="Mimi">
-                        <img class="preview-image" src="webp/mimi-espera.webp" alt="Mimi">
-                    </div>
-                    <div class="narrator-option" data-narrator="3" data-name="Vid">
-                        <img class="preview-image" src="webp/vid-espera.webp" alt="Vid">
-                    </div>
-                    <div class="narrator-option" data-narrator="4" data-name="Ava">
-                        <img class="preview-image" src="webp/ava-espera.webp" alt="Ava">
-                    </div>
-                </div>
-            </div>
-            <div class="music-button" role="button" aria-label="Música"></div>
-            <div class="info-button" role="button" aria-label="Información">i</div>
-            <div class="info-panel">
-                <h4>🎵 Sistema de Audio Premium</h4>
-                <p>Esta web ofrece una experiencia de audio única con narradores virtuales.</p>
-                <p><strong>Funcionalidades:</strong></p>
-                <ul>
-                    <li><strong>Click simple</strong> en cualquier sección: Audio sin avatar</li>
-                    <li><strong>Doble click</strong> en cualquier sección: Audio con avatar</li>
-                    <li><strong>Click en el avatar</strong>: Audio explicativo del personaje</li>
-                    <li><strong>Doble click en el avatar</strong>: Ocultar/Mostrar</li>
-                </ul>
-                <p>Selecciona diferentes narradores y disfruta del contenido premium.</p>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
-                <div class="time-display">0:00</div>
-            </div>
-            <div class="equalizer">
-                <div class="eq-bar"></div>
-                <div class="eq-bar"></div>
-                <div class="eq-bar"></div>
-                <div class="eq-bar"></div>
-                <div class="eq-bar"></div>
-            </div>
-        </div>
-        <div class="player-closed">
-            <img class="avatar-image" id="avatarImageSleep" src="webp/nara-espera.webp" alt="Avatar Sleep">
-            <img class="avatar-image" id="avatarImageSpeak" style="display:none;" alt="Avatar Speak">
-        </div>
-    </div>
 
     <!-- Área para mostrar el avatar cuando está oculto -->
     <div class="show-avatar-area" id="showAvatarArea" title="Doble click para mostrar el avatar">👤</div>
